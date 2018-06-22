@@ -1,0 +1,60 @@
+{
+  "name": "find-extrema",
+  "version": "1.0.0",
+  "description": "Numerically compute the extreme of a given (analytic) function: minima, maxima, and points of inflection",
+  "homepage": "https://github.com/dbkaplun/find-extrema",
+  "bugs": "https://github.com/dbkaplun/find-extrema/issues",
+  "repository": "https://github.com/dbkaplun/find-extrema",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm run tslint && npm run type-check && npm run jest",
+    "tslint": "tslint -c tslint.json -p tsconfig.json 'src/**/*.ts'",
+    "type-check": "tsc --noEmit",
+    "jest": "jest",
+    "build": "rm -r lib/ && babel src/ --out-dir lib/ --extensions \".ts,.tsx\" && tsc --emitDeclarationOnly",
+    "preversion": "npm run build && git add -A lib/ && npm test"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.49",
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.49",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "@babel/preset-typescript": "^7.0.0-beta.49",
+    "@types/jest": "^23.1.1",
+    "jest": "^23.1.0",
+    "ts-jest": "^22.4.6",
+    "tslint": "^5.10.0",
+    "tslint-config-airbnb": "^5.9.2",
+    "typescript": "^2.9.1"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(\\.|/)(test|spec)\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ]
+  },
+  "keywords": [
+    "extrema",
+    "extremum",
+    "minima",
+    "minimum",
+    "maxima",
+    "maximum",
+    "inflection",
+    "points",
+    "numerical",
+    "analysis",
+    "newtons",
+    "method"
+  ],
+  "author": "Dan Kaplun <dbkaplun@gmail.com>",
+  "license": "MIT"
+}
