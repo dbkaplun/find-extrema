@@ -1,7 +1,7 @@
 {
   "name": "find-extrema",
   "version": "1.0.0",
-  "description": "Numerically compute the extreme of a given (analytic) function: minima, maxima, and points of inflection",
+  "description": "Numerically compute the extrema of a given (analytic) function: minima, maxima, and points of inflection",
   "homepage": "https://github.com/dbkaplun/find-extrema",
   "bugs": "https://github.com/dbkaplun/find-extrema/issues",
   "repository": "https://github.com/dbkaplun/find-extrema",
@@ -22,6 +22,7 @@
     "@babel/preset-env": "^7.0.0-beta.49",
     "@babel/preset-typescript": "^7.0.0-beta.49",
     "@types/jest": "^23.1.1",
+    "@types/node": "^10.3.4",
     "jest": "^23.1.0",
     "ts-jest": "^22.4.6",
     "tslint": "^5.10.0",
@@ -29,6 +30,7 @@
     "typescript": "^2.9.1"
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "./test/setup.ts",
     "collectCoverage": true,
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
@@ -52,8 +54,9 @@
     "points",
     "numerical",
     "analysis",
-    "newtons",
-    "method"
+    "root",
+    "finding",
+    "algorithm"
   ],
   "author": "Dan Kaplun <dbkaplun@gmail.com>",
   "license": "MIT"
