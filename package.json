@@ -7,6 +7,7 @@
   "repository": "https://github.com/dbkaplun/find-extrema",
   "main": "lib/index.js",
   "scripts": {
+    "find-convergent-ranges": "tools/find-convergent-ranges/find-convergent-ranges.js",
     "test": "npm run tslint && npm run type-check && npm run jest",
     "tslint": "tslint -c tslint.json -p tsconfig.json 'src/**/*.ts'",
     "type-check": "tsc --noEmit",
